@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo BASH_SOURCE=$BASH_SOURCE
+
+function privateScripts {
+  if [ -e $BASH_SOURCE/private ] && [ -e $BASH_SOURCE/private/dot-bashrc ]; then
+    source private/dot-bashrc
+  fi
+}
+privateScripts
