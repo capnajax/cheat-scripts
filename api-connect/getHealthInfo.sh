@@ -108,7 +108,7 @@ for __pod in $(kubectl get pods -o name | cut -d'/' -f2); do
   done
 done
 
-echo "Gatheric apic data"
+echo "Gathering apic data"
 
 for i in status version; do
     sudo apic $i > $apiclogs/$i.log
@@ -122,4 +122,4 @@ tar -C $out -cz -f ${DIR}/apic-logs.tgz .
 
 rm -rf $out
 
-echo "Compelte. Logs in \"${DIR}/apic-logs.tgz\""
+echo "Complete. Logs in \"${DIR}/apic-logs.tgz\""
