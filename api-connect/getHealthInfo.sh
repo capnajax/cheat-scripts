@@ -120,6 +120,6 @@ echo "Archiving results and removing working directory"
 
 tar -C $out -cz -f ${DIR}/apic-logs.tgz .
 
-rm -rf $out
+sudo rm -rf $out
 
 echo "Complete. Logs in \"${DIR}/apic-logs.tgz\""
